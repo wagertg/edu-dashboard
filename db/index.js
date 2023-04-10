@@ -24,7 +24,13 @@ const Campus = conn.define("campus", {
       notEmpty: true,
     },
   },
+  description: {
+    type: TEXT,
+  },
   image: {
+    type: TEXT,
+  },
+  header: {
     type: TEXT,
   },
 });
@@ -63,7 +69,7 @@ const Student = conn.define("student", {
     type: DECIMAL(10, 1),
     validate: {
       min: 0,
-      max: 10,
+      max: 4,
     },
   },
   image: {
@@ -81,28 +87,40 @@ const seed = async () => {
     Campus.create({
       name: "Syracuse University",
       address: "900 South Crouse Ave Syracuse, NY 13244",
-      image: "public/syracuse.png",
+      description:
+        "Syracuse University is a private research university in Syracuse, New York. Established in 1870 with roots in the Methodist Episcopal Church, the university has been nonsectarian since 1920. Located in the city's University Hill neighborhood, east and southeast of Downtown Syracuse, the large campus features an eclectic mix of architecture, ranging from nineteenth-century Romanesque Revival to contemporary buildings.",
+      image: "public/su.png",
+      header: "public/suheader.png",
     }),
   ]);
   const [occ] = await Promise.all([
     Campus.create({
       name: "Onondaga Community College",
       address: "4585 W Seneca Turnpike, Syracuse, NY 13215",
+      description:
+        "Onondaga Community College (OCC) is a public community college that serves Onondaga County, New York, at two campuses. It is part of the State University of New York (SUNY) system.",
       image: "public/occ.jpeg",
+      header: "public/headerocc.jpeg",
     }),
   ]);
   const [lemoyne] = await Promise.all([
     Campus.create({
       name: "LeMoyne College",
       address: "1419 Salt Springs Rd, Syracuse, NY 13214",
+      description:
+        "LeMoyne College is a private Jesuit college in DeWitt, New York. It was founded by the Society of Jesus in 1946 and named after Jesuit missionary Simon Le Moyne. At its founding, Le Moyne was the first co-educational Jesuit college in the United States.",
       image: "public/lemoyne.jpeg",
+      header: "public/headerlemoyne.jpeg",
     }),
   ]);
   const [oswego] = await Promise.all([
     Campus.create({
       name: "SUNY Oswego",
       address: "7060 NY-104, Oswego, NY 13126",
+      description:
+        "State University of New York at Oswego is a public university in the City of Oswego and Town of Oswego, New York. It has two campuses: historic lakeside campus in Oswego and Metro Center in Syracuse, New York.",
       image: "public/oswego.jpeg",
+      header: "public/headeroswego.jpeg",
     }),
   ]);
 
