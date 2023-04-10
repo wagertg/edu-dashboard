@@ -53,12 +53,12 @@ const StudentEdit = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "12%",
+          paddingTop: "7%",
         }}
       >
         <Card
           style={{
-            width: "40rem",
+            width: "35rem",
             boxShadow: "0 0px 20px #6a000cfe",
           }}
         >
@@ -68,12 +68,7 @@ const StudentEdit = () => {
               return (
                 <>
                   <div key={student.id}>
-                    <Card.Img
-                      height="500"
-                      width="500"
-                      variant="top"
-                      src={student.image}
-                    />
+                    <Card.Img width="35rem" variant="top" src={student.image} />
 
                     <Card.Body>
                       <Card.Title>

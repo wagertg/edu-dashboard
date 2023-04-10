@@ -119,11 +119,15 @@ const Campuses = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            alignContent: "center",
             paddingTop: "7%",
           }}
         >
-          <Carousel slide={false}>
+          <Carousel
+            width="550"
+            height="550"
+            style={{ margin: "2" }}
+            slide={false}
+          >
             {campuses.map((campus) => {
               const studentLength = students.filter((student) => {
                 return student.campusId === campus.id;
@@ -135,8 +139,8 @@ const Campuses = () => {
                 >
                   <Link to={`/campuses/${campus.id}`}>
                     <img
-                      width={650}
-                      height={650}
+                      width="500"
+                      height="500"
                       alt="slide"
                       src={campus.image}
                     />

@@ -47,12 +47,12 @@ const CampusEdit = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "12%",
+          paddingTop: "7%",
         }}
       >
         <Card
           className="bg-light text-black"
-          style={{ width: "50rem", boxShadow: "0 0px 20px #6a000cfe" }}
+          style={{ boxShadow: "0 0px 20px #6a000cfe", width: "35rem" }}
         >
           {campuses
             .filter((campus) => campus.id === id)
@@ -60,7 +60,7 @@ const CampusEdit = () => {
               return (
                 <>
                   <div key={campus.id}>
-                    <Card.Img variant="top" src={campus.header} />
+                    <Card.Img width="500" variant="top" src={campus.header} />
 
                     <Card.Body>
                       <Card.Title>{campus.name}</Card.Title>

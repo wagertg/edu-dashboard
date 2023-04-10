@@ -16,9 +16,11 @@ const Home = () => {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
           justifyContent: "center",
+          flexDirection: "column",
+
           alignItems: "center",
+          alignContent: "center",
           paddingLeft: "7%",
           paddingTop: "7%",
         }}
@@ -30,7 +32,7 @@ const Home = () => {
               height: "300px",
               color: "#fff",
               backgroundColor: "hsl(132, 100%, 18%)",
-              marginRight: "1%",
+              marginBottom: "1%",
             }}
           >
             <Card.Body
@@ -48,6 +50,7 @@ const Home = () => {
             </Card.Body>
           </Card>
         </Link>
+
         <Link style={{ textDecoration: "none" }} to={"/students"}>
           <Card
             style={{
@@ -55,7 +58,7 @@ const Home = () => {
               height: "300px",
               color: "#fff",
               backgroundColor: "hsl(235, 100%, 18%)",
-              marginLeft: "1%",
+              marginTop: "1%",
             }}
           >
             <Card.Body
