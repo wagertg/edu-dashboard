@@ -21,6 +21,8 @@ const Campuses = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // This asynchronous function handles form submission. It dispatches a `createCampus` action with the form data, and resets the form fields if the campus is successfully created. It also handles any errors that occur during campus creation, setting these errors to the `errors` state.
+
   const save = async (ev) => {
     ev.preventDefault();
     try {
@@ -34,6 +36,8 @@ const Campuses = () => {
     }
     navigate("/campuses");
   };
+
+  // This function deletes a campus. It dispatches a `destroyCampus` action with the campus to be deleted.
 
   const destroy = (campus) => {
     dispatch(destroyCampus(campus));
@@ -133,10 +137,7 @@ const Campuses = () => {
                 return student.campusId === campus.id;
               });
               return (
-                <Carousel.Item
-                  key={campus.id}
-                  // className={campus.id === id ? "selected" : ""}
-                >
+                <Carousel.Item key={campus.id}>
                   <Link to={`/campuses/${campus.id}`}>
                     <img
                       width="500"

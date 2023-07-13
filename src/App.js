@@ -12,12 +12,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 const App = () => {
-  const { campuses, students } = useSelector((state) => state);
   const dispatch = useDispatch();
+
+  // This React Hook is used to dispatch actions when the component mounts, loading the campuses and students data from the server.
+
   useEffect(() => {
     dispatch(fetchCampuses());
     dispatch(fetchStudents());
   }, []);
+
   return (
     <div>
       <Sidebar>

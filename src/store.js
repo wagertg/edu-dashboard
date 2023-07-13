@@ -3,6 +3,8 @@ import logger from "redux-logger";
 import thunk from "redux-thunk";
 import axios from "axios";
 
+// Reducers specify how the application's state changes in response to actions sent to the store.
+
 const campuses = (state = [], action) => {
   if (action.type === "SET_CAMPUSES") {
     return action.campuses;
@@ -44,6 +46,8 @@ const students = (state = [], action) => {
   }
   return state;
 };
+
+// These functions return asynchronous functions that dispatch actions. They make API calls and then dispatch actions with the data received
 
 export const fetchCampuses = () => {
   return async (dispatch) => {
@@ -101,10 +105,14 @@ export const destroyStudent = (student) => {
   };
 };
 
+// Used to combine the `campuses` and `students` reducers into a `reducer` that will manage the entire state of the app
+
 const reducer = combineReducers({
   campuses,
   students,
 });
+
+// Used to create the Redux store with the root reducer, and middleware (`logger` and `thunk`)
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));
 

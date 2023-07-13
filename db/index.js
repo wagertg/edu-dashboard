@@ -1,8 +1,16 @@
 const Sequelize = require("sequelize");
+
+// Establishing a connection to the database, either using the connection URL in the environment variables or using a local connection URL
+
 const conn = new Sequelize(
   process.env.DATABASE_URL || "postgres://localhost/acme_schools_db"
 );
+
+// Importing specific types from Sequelize that will be used in the model definitions
+
 const { UUID, UUIDV4, STRING, TEXT, DECIMAL } = Sequelize;
+
+// Defining the 'campus' model with a set of fields and their types.
 
 const Campus = conn.define("campus", {
   id: {
@@ -77,8 +85,12 @@ const Student = conn.define("student", {
   },
 });
 
+// Defining the relationship between the models. A student belongs to a campus, and a campus can have many students.
+
 Student.belongsTo(Campus);
 Campus.hasMany(Student);
+
+// Defining an async function to seed the database with initial data. The 'force: true' option in sync will drop the tables if they exist and re-create them
 
 const seed = async () => {
   await conn.sync({ force: true });
@@ -234,6 +246,8 @@ const seed = async () => {
     }),
   ]);
 };
+
+// Exporting the database connection, seed function, and models to be used elsewhere in the application
 
 module.exports = {
   conn,

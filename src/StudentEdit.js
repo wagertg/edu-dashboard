@@ -8,19 +8,30 @@ import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 
 const StudentEdit = () => {
+  // This React Router Hook allows us to access the `id` parameter from the current route.
+
   const { id } = useParams();
   const { students, campuses } = useSelector((state) => state);
+  // There are several local states initialized in the component. They each have their own state-setting functions.
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [gpa, setGpa] = useState(0.0);
   const [campusId, setCampusId] = useState("");
   const [show, setShow] = useState(false);
+
+  // These Hooks provide the `dispatch` function to dispatch actions to the Redux store and the `navigate` function to navigate through the app.
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // These are event handler functions for controlling the visibility
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // This Hook is used to populate the local states with the information of the student whose `id` matches the `id` parameter from the route when the component mounts or the `students` state changes.
 
   useEffect(() => {
     const student = students.find((student) => student.id === id);
@@ -33,6 +44,8 @@ const StudentEdit = () => {
     }
   }, [students]);
 
+  // This is an asynchronous event handler function used to update a student's details when a form is submitted. It dispatches an `updateStudent` action, and navigates the user back to the "/students" route.
+
   const update = async (ev) => {
     ev.preventDefault();
     await dispatch(
@@ -40,6 +53,8 @@ const StudentEdit = () => {
     );
     navigate("/students");
   };
+
+  // This is an event handler function used to delete a student. It dispatches a `destroyStudent` action and navigates the user back to the "/students" route.
 
   const destroy = (student) => {
     dispatch(destroyStudent(student));

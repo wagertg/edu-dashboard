@@ -18,7 +18,6 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-
           alignItems: "center",
           alignContent: "center",
           paddingLeft: "7%",
