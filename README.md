@@ -1,4 +1,4 @@
-<h1 align="center">Junior Final Project - Campus and Student Admin Dashboard Project 🎓</h1>
+<h1 align="center">Campus and Student Admin Dashboard Project 🎓</h1>
 
 <p align="center">
 <a href="https://github.com/wagertg/Portfolio"><img src="https://img.shields.io/badge/-Back%20to%20Portfolio-grey?style=flat"/></a>
