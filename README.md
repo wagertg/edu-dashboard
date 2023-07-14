@@ -1,14 +1,14 @@
 <h1 align="center">Campus and Student Admin Dashboard 🎓</h1>
 
 <p align="center">
-<a href="https://github.com/wagertg/myPortfolio"><img src="https://img.shields.io/badge/-Back%20to%20Portfolio-grey?style=flat"/></a>
+<a href="https://github.com/wagertg/Portfolio"><img src="https://img.shields.io/badge/-Back%20to%20Portfolio-grey?style=flat"/></a>
 <a href="https://www.linkedin.com/in/traviswager/"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=LinkedIn&logoColor=white"/></a>
 <a href="mailto:traviswager@gmail.com"><img src="https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white"/></a>
 </p>
 
 ## 👨‍💻 About The Project
 
-Developed a comprehensive admin dashboard to bolster administrative efficiency and content management.
+Engineered an all-encompassing admin dashboard to aid in administrative productivity and content management, making the daunting task of school administration a breeze. This intuitive and user-friendly dashboard is perfect for streamlining operations and making processes more efficient.
 
 ## 🛠️ Built With
 
