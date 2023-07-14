@@ -1,4 +1,4 @@
-<h1 align="center">Junior Final Project - Campus and Student Admin Dashboard Project 🎓/h1>
+<h1 align="center">Junior Final Project - Campus and Student Admin Dashboard Project 🎓</h1>
 
 <p align="center">
 <a href="https://github.com/wagertg/Portfolio"><img src="https://img.shields.io/badge/-Back%20to%20Portfolio-grey?style=flat"/></a>
@@ -24,10 +24,10 @@ This application was built utilizing a collection of technologies including but 
 
 ## 📖 Features
 
-* Real-time messaging system: Facilitates immediate communication among team members.
-* Live notifications: Ensures everyone is up-to-date with the latest project developments.
-* Task organization: Offers tools for categorizing and prioritizing tasks.
-* Project tracking: Allows team members and managers to monitor the progress of different projects.
+* Dynamic Data Management: Provides the ability to create, edit, and delete campus and student profiles, giving administrators full control over data.
+* Custom Campus Affiliations: An administrative feature that allows for the assignment and modification of custom campus affiliations, enhancing data accuracy and flexibility.
+* Intuitive User Interface: Designed with usability in mind, the dashboard makes navigation and data manipulation easy and efficient.
+* Comprehensive Reporting: Integrated reporting tools allow administrators to quickly access, analyze, and export data for further examination or sharing.
 
 ## 📸 Snapshot of the Project
 
