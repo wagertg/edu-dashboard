@@ -29,7 +29,7 @@ This application was built utilizing a collection of technologies including but 
 * Intuitive User Interface: Designed with usability in mind, the dashboard makes navigation and data manipulation easy and efficient.
 * Comprehensive Reporting: Integrated reporting tools allow administrators to quickly access, analyze, and export data for further examination or sharing.
 
-## 📸 Snapshot of the Project
+## 📸 Snapshots
 
 ![Capstone](./Screenshots/edu-student-profile.jpg)
 
